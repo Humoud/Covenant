@@ -45,7 +45,7 @@ namespace Covenant.Models.Listeners
         public string GUID { get; set; } = Utilities.CreateShortGuid();
         [Required]
         public string Description { get; set; } = "A generic listener.";
-        [Required, RegularExpression(@"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$", ErrorMessage = "The field BindAddress must be an IPv4 Address.")]
+        [Required, RegularExpression(@"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$", ErrorMessage = "The field BindAddress must be an IPv4 Address.")]
         public string BindAddress { get; set; } = "0.0.0.0";
         [Required, Range(1, 65535)]
         public int BindPort { get; set; } = 80;
